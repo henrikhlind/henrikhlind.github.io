@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --black: #1A1C1F;
+    --dark-gray: #363739;
+    --gray: #7D7E7F;
+    --gray-transparent: rgb(54, 55, 57, 0.25);
+    --light-gray: #BFBFBF;
+    --light-gray-transparent: rgb(191, 191, 191, 0.1);
+    --white: #E8EFE9;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background: var(--black);
+}
+
+h1, h2, h3, p, a {
+    font-family: 'Jost', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    
+    color: var(--white);
+}
+
+h1 {
+    font-size: 1.25rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* a[target="_blank"] {
+    color: var(--light-gray);
+}
+
+a[target="_blank"]::before {
+    font: var(--fa-font-solid);
+    content: "\f08e\00a0";
+    text-indent: 0;
+} */
+
+.container {
+    background: var(--gray-transparent);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--light-gray-transparent);
+    filter: drop-shadow(0 0 20px rgb(0 0 0 .10));
+
+    width: 55vw;
+    height: 80vh;
+    border-radius: 1vw;
+
+    display: grid;
+    place-self: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "profil profil profil profil profil info info info info"
+        "profil profil profil profil profil info info info info"
+        "profil profil profil profil profil info info info info"
+        "profil profil profil profil profil info info info info";
+}
+.profile {
+    margin: 2vw;
+    grid-area: profil;
+}
+
+.info {
+    margin: 1vw;
+    grid-area: info;
+    overflow-y: scroll;
+}
+
+.picture {
+    width: 15vw;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+
+    background-image: url('../img/profil.jpeg');
+    background-position: center;
+    background-size: cover;
+}
+
+.vert-divider {
+    position: absolute;
+    top: 15%;
+    height: 70%;
+    left: 53%;
+    border-left: 1.5px solid var(--light-gray-transparent);
+}
+
+.profile>h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 1vh 0;
+}
+
+.profile>p {
+    margin: 0;
+}
+
+.profile>.social {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 1vw;
+    height: 30vh;
+}
+
+.highlights>hr {
+    width: 80%;
+    border: none;
+    height: 1px;
+    background-color: var(--light-gray-transparent);
+}
+
+.container>hr {
+    display: none;
+}
+
+.list>h3:not(:first-child) {
+    color: var(--light-gray);
+    text-indent: 2vw;
+}
+
+.projects>h3:first-child {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.highlights>h3:first-child {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.projects>.list>h3:not(:first-child) {
+    text-indent: 0;
+}
+
+.icon::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90vw;
+        height: 95%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .container>hr {
+        display: block;
+        width: 90%;
+        border: none;
+        height: 0.2vh;
+        background-color: var(--light-gray-transparent);
+    }
+    .highlights>hr {
+        height: 0.5px;
+    }
+    .profile {
+        text-align: center;
+    }
+    .picture {
+        width: 30vw;
+        margin: 0 auto;
+    }
+    .vert-divider {
+        display: none;
+    }
+    .profile>.social {
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        gap: 2vh;
+        margin-top: 1vh;
+    }
+    .profile>.social>a>i {
+        font-size: 1.25rem;
+        margin-top: 1vh;
+    }
+}
