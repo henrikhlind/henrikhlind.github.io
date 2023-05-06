@@ -38,16 +38,6 @@ a {
     text-decoration: none;
 }
 
-/* a[target="_blank"] {
-    color: var(--light-gray);
-}
-
-a[target="_blank"]::before {
-    font: var(--fa-font-solid);
-    content: "\f08e\00a0";
-    text-indent: 0;
-} */
-
 .container {
     background: var(--gray-transparent);
     -webkit-backdrop-filter: blur(10px);
