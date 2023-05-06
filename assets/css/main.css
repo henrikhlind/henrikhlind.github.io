@@ -143,6 +143,26 @@ a {
     -webkit-font-smoothing: antialiased;
 }
 
+.error {
+    width: 50vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.error>h1 {
+    font-size: 8rem;
+    margin: 0;
+}
+
+.error>h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
 @media only screen and (max-width: 768px) {
     .container {
         width: 90vw;
