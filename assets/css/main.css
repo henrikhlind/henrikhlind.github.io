@@ -71,6 +71,10 @@ a {
     overflow-y: scroll;
 }
 
+.info::-webkit-scrollbar {
+    display: none;
+}
+
 .picture {
     width: 15vw;
     border-radius: 50%;
