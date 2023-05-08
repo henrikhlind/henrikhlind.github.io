@@ -72,12 +72,11 @@ a {
 }
 
 .info::-webkit-scrollbar {
-    width: 0.5vw;
+    width: 0.15vw;
 }
 
 .info::-webkit-scrollbar-thumb {
     background: var(--dark-gray);
-    width: 0.5vw;
     border-radius: 0.25vw;
 }
 
