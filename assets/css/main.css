@@ -72,7 +72,18 @@ a {
 }
 
 .info::-webkit-scrollbar {
-    display: none;
+    width: 0.5vw;
+}
+
+.info::-webkit-scrollbar-thumb {
+    background: var(--dark-gray);
+    width: 0.5vw;
+    border-radius: 0.25vw;
+}
+
+.info::-webkit-scrollbar-track {
+    background: var(--black);
+    border-radius: 0.25vw;
 }
 
 .picture {
