@@ -36,6 +36,7 @@ h1 {
 
 a {
     text-decoration: none;
+    color: var(--light-gray);
 }
 
 .container {
@@ -63,6 +64,8 @@ a {
 .profile {
     margin: 2vw;
     grid-area: profil;
+    display: flex;
+    flex-direction: column;
 }
 
 .info {
@@ -111,14 +114,18 @@ a {
 
 .profile>p {
     margin: 0;
+    flex-grow: 1;
 }
 
 .profile>.social {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
     gap: 1vw;
-    height: 30vh;
+    height: 5%;
+    text-align: center;
+}
+
+.profile>.social>a {
+    color: var(--white);
+    padding: 1%;
 }
 
 .highlights>hr {
